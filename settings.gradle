@@ -1,5 +1,4 @@
 
 include ':opencv'
-project(':opencv').projectDir = new File('/opencv')
 include ':app'
 rootProject.name = "OpenCVLibrary"
