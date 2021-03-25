@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">App Recognition OCR</string>
+    <string name="ok">OK</string>
+    <string name="camera_permission_available">Camera permission is available. Starting preview.</string>
+    <string name="camera_access_required">Son necesarios los permisos para poder continuar.</string>
+    <string name="camera_permission_not_available">Permission is not available. Requesting camera permission.</string>
+    <string name="camera_permission_granted">Camera permission was granted. Starting preview.</string>
+    <string name="camera_permission_denied">Camera permission request was denied.</string>
+    <string name="button_crop_activity_complete">Completado con exito!</string>
+    <string name="button_crop_activity_wait">Ya casi termino</string>
+    <string name="pref_key_barcode_reticle_width" translatable="false">barcode_brw</string>
+    <string name="pref_key_barcode_reticle_height" translatable="false">barcode_brh</string>
+    <string name="dialog_bottom_title">Verifica tus datos</string>
+    <string name="dialog_bottom_title_error">Error al obtener tu datos</string>
+    <string name="dialog_bottom_input_name">Nombre</string>
+    <string name="dialog_bottom_input_address">Domicilio</string>
+    <string name="dialog_bottom_input_key_electoral">Clave electoral</string>
+    <string name="dialog_bottom_input_curp">CURP</string>
+    <string name="dialog_bottom_input_year_registration">Año de registro</string>
+    <string name="dialog_bottom_input_state">Estado</string>
+    <string name="dialog_bottom_input_city">Municipio</string>
+    <string name="dialog_bottom_input_section">Sección</string>
+    <string name="dialog_bottom_input_location">Localidad</string>
+    <string name="dialog_bottom_input_broadcast">Emisión</string>
+    <string name="dialog_bottom_input_validity">Vigencia</string>
+    <string name="dialog_bottom_input_birthdate">Fecha de nacimiento</string>
+    <string name="dialog_bottom_input_gender">Sexo</string>
+    <string name="dialog_bottom_input_id_ine">Id</string>
+    <string name="dialog_bottom_button_continue">Cotinuar</string>
+    <string name="dialog_bottom_button_finish">Finalizar</string>
+    <string name="dialog_bottom_button_validate_continue">Validar y Continuar</string>
+    <string name="dialog_bottom_button_repeat">Volver a intentar</string>
+    <string name="error_validation_document">Lo sentimos, no logramos escanear tu documento correctamente, puede que la foto este borrosa o no sea legible, por favor intenta de nuevo, gracias.</string>
+
+    <string name="flash">Flash</string>
+
+
+    <!--regex-->
+    <string name="regex_four_number">[0-9]{4}</string>
+    <string name="regex_three_number">[0-9]{3}</string>
+    <string name="regex_two_number">[0-9]{2}</string>
+    <string name="regex_ine_birthdate">[0-9]{1,2}(/|-)[0-9]{1,2}(/|-)[0-9]{4}</string>
+    <string name="regex_year">18[0-9]{2}|19[0-9]{2}|20[0-9]{2}</string>
+    <string name="regex_gender">[HM]{1}</string>
+    <string name="regex_ine_year_registration">(18[0-9\\s]{3}|19[0-9\\s]{3}|20[0-9\\s]{3})(0[1-2]{1})</string>
+    <string name="regex_ine_key_electoral">[A-Z]{6}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[0-9]{2}[HM]{1}[0-9]{3}</string>
+    <string name="regex_curp">[A-Z]{1}[AEIOU]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}[0-9]{1}$</string>
+
+</resources>

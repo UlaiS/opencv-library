@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_hideable="false"
+    app:backgroundTint="?attr/colorSurface"
+    app:behavior_peekHeight="200dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutWidthAndHeightReverseIne"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bar_bottom_dialog"
+                android:layout_marginTop="@dimen/margin_start_and_end_standard"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/titleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_start_and_end_standard"
+                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="22dp"
+                android:text="@string/dialog_bottom_title"
+                android:letterSpacing="0.06"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgBar"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idIneTxtInputL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dialog_bottom_input_id_ine"
+                android:inputType="text|textVisiblePassword|textNoSuggestions"
+                app:errorEnabled="true"
+                app:helperTextEnabled="true"
+                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleTxt">
+
+                <EditText
+                    android:id="@+id/idIneEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="none"
+                    android:gravity="top|left"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:maxLines="10"
+                    android:minLines="6"
+                    android:inputType="textMultiLine"
+                    tools:ignore="RtlHardcoded,TextFields" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/finishBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textAllCaps="false"
+                android:text="@string/dialog_bottom_button_finish"
+                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idIneTxtInputL" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

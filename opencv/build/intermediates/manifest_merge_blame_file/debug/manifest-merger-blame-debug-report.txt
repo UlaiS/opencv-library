@@ -1,0 +1,48 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.opencv"
+4    android:versionCode="405010"
+5    android:versionName="4.5.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml
+9        android:targetSdkVersion="26" />
+9-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:6:5-64
+11-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:6:22-62
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:7:5-79
+12-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:7:22-77
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:8:5-80
+13-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:8:22-78
+14
+15    <uses-feature
+15-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:10:5-84
+16        android:name="android.hardware.camera"
+16-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:10:19-57
+17        android:required="false" />
+17-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:10:58-82
+18    <uses-feature
+18-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:11:5-94
+19        android:name="android.hardware.camera.autofocus"
+19-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:11:19-67
+20        android:required="false" />
+20-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:11:68-92
+21    <uses-feature
+21-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:12:5-90
+22        android:name="android.hardware.camera.front"
+22-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:12:19-63
+23        android:required="false" />
+23-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:12:64-88
+24    <uses-feature
+24-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:13:5-100
+25        android:name="android.hardware.camera.front.autofocus"
+25-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:13:19-73
+26        android:required="false" />
+26-->C:\Users\Ulain\AndroidStudioProjects\OpenCVLibrary\opencv\java\AndroidManifest.xml:13:74-98
+27
+28</manifest>
