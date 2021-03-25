@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_hideable="false"
+    app:backgroundTint="?attr/colorSurface"
+    app:behavior_peekHeight="200dp"
+    android:orientation="vertical"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/linearLayoutWidthAndHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:id="@+id/imgBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_start_and_end_standard"
+                        android:src="@drawable/ic_bar_bottom_dialog"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/titleTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                        android:layout_marginTop="@dimen/margin_start_and_end_standard"
+                        android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                        android:gravity="center"
+                        android:letterSpacing="0.06"
+                        android:text="@string/dialog_bottom_title"
+                        android:textColor="@color/custom_grey"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgBar" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTwo">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayoutNested"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/nameTxtInputL"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                                android:layout_marginTop="@dimen/margin_top_bottom_dialog"
+                                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                                android:hint="@string/dialog_bottom_input_name"
+                                android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                app:errorEnabled="true"
+                                app:helperTextEnabled="true"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <EditText
+                                    android:id="@+id/nameEdit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:autofillHints="none"
+                                    android:imeOptions="actionDone"
+                                    android:importantForAutofill="no"
+                                    android:inputType="text"
+                                    tools:ignore="TextFields" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/addressTxtInputL"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                                android:hint="@string/dialog_bottom_input_address"
+                                android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                app:errorEnabled="true"
+                                app:helperTextEnabled="true"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/nameTxtInputL">
+
+                                <EditText
+                                    android:id="@+id/addressEdit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:autofillHints="none"
+                                    android:imeOptions="actionDone"
+                                    android:importantForAutofill="no"
+                                    android:inputType="text"
+                                    tools:ignore="TextFields" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/keyElectoralTxtInputL"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                                android:hint="@string/dialog_bottom_input_key_electoral"
+                                android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                app:errorEnabled="true"
+                                app:helperTextEnabled="true"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/addressTxtInputL">
+
+                                <EditText
+                                    android:id="@+id/keyElectoralEdit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:autofillHints="none"
+                                    android:imeOptions="actionDone"
+                                    android:importantForAutofill="no"
+                                    android:inputType="text"
+                                    tools:ignore="TextFields" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/curpTxtInputL"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                                android:hint="@string/dialog_bottom_input_curp"
+                                android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                app:errorEnabled="true"
+                                app:helperTextEnabled="true"
+                                app:layout_constraintEnd_toStartOf="@+id/genderTxtInputL"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/keyElectoralTxtInputL">
+
+                                <EditText
+                                    android:id="@+id/curpEdit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:autofillHints="none"
+                                    android:imeOptions="actionDone"
+                                    android:importantForAutofill="no"
+                                    android:inputType="text"
+                                    tools:ignore="TextFields" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/genderTxtInputL"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                                android:hint="@string/dialog_bottom_input_gender"
+                                android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                app:errorEnabled="true"
+                                app:helperTextEnabled="true"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/keyElectoralTxtInputL">
+
+                                <EditText
+                                    android:id="@+id/genderEdit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:autofillHints="none"
+                                    android:imeOptions="actionDone"
+                                    android:importantForAutofill="no"
+                                    android:inputType="text"
+                                    tools:ignore="TextFields" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:id="@+id/line1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                                android:orientation="horizontal"
+                                app:layout_constraintTop_toBottomOf="@+id/curpTxtInputL">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/stateTxtInputL"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/margin_start_and_end_standard_linear_layout_input_text"
+                                    android:layout_weight="2"
+                                    android:hint="@string/dialog_bottom_input_state"
+                                    android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                    app:errorEnabled="true"
+                                    app:helperTextEnabled="true">
+
+                                    <EditText
+                                        android:id="@+id/stateEdit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autofillHints="none"
+                                        android:imeOptions="actionDone"
+                                        android:importantForAutofill="no"
+                                        android:inputType="text"
+                                        tools:ignore="TextFields" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/cityTxtInputL"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:hint="@string/dialog_bottom_input_city"
+                                    android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                    app:errorEnabled="true"
+                                    app:helperTextEnabled="true"
+                                    app:layout_constraintEnd_toStartOf="@+id/imgBar"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/yearRegistrationTxtInputL">
+
+                                    <EditText
+                                        android:id="@+id/cityEdit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autofillHints="none"
+                                        android:imeOptions="actionDone"
+                                        android:importantForAutofill="no"
+                                        android:inputType="text"
+                                        tools:ignore="TextFields" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/sectionTxtInputL"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_start_and_end_standard_linear_layout_input_text"
+                                    android:layout_weight="2"
+                                    android:hint="@string/dialog_bottom_input_section"
+                                    android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                    app:errorEnabled="true"
+                                    app:helperTextEnabled="true">
+
+                                    <EditText
+                                        android:id="@+id/sectionEdit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autofillHints="none"
+                                        android:imeOptions="actionDone"
+                                        android:importantForAutofill="no"
+                                        android:inputType="text"
+                                        tools:ignore="TextFields" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/line2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                                android:orientation="horizontal"
+                                app:layout_constraintTop_toBottomOf="@+id/line1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/locationTxtInputL"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/margin_start_and_end_standard_linear_layout_input_text"
+                                    android:layout_weight="2"
+                                    android:hint="@string/dialog_bottom_input_location"
+                                    android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                    app:errorEnabled="true"
+                                    app:helperTextEnabled="true"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/imgBar"
+                                    app:layout_constraintTop_toBottomOf="@+id/yearRegistrationTxtInputL">
+
+                                    <EditText
+                                        android:id="@+id/locationEdit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autofillHints="none"
+                                        android:imeOptions="actionDone"
+                                        android:importantForAutofill="no"
+                                        android:inputType="text"
+                                        tools:ignore="TextFields" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/broadcastTxtInputL"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:hint="@string/dialog_bottom_input_broadcast"
+                                    android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                    app:errorEnabled="true"
+                                    app:helperTextEnabled="true">
+
+                                    <EditText
+                                        android:id="@+id/broadcastEdit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autofillHints="none"
+                                        android:imeOptions="actionDone"
+                                        android:importantForAutofill="no"
+                                        android:inputType="text"
+                                        tools:ignore="TextFields" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/validityTxtInputL"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_start_and_end_standard_linear_layout_input_text"
+                                    android:layout_weight="2"
+                                    android:hint="@string/dialog_bottom_input_validity"
+                                    android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                    app:errorEnabled="true"
+                                    app:helperTextEnabled="true"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/imgBar"
+                                    app:layout_constraintTop_toBottomOf="@+id/locationTxtInputL">
+
+                                    <EditText
+                                        android:id="@+id/validityEdit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autofillHints="none"
+                                        android:imeOptions="actionDone"
+                                        android:importantForAutofill="no"
+                                        android:inputType="text"
+                                        tools:ignore="TextFields" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/line3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                                android:orientation="horizontal"
+                                app:layout_constraintTop_toBottomOf="@+id/line2">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/yearRegistrationTxtInputL"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                                    android:layout_weight="1"
+                                    android:hint="@string/dialog_bottom_input_year_registration"
+                                    android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                    app:errorEnabled="true"
+                                    app:helperTextEnabled="true">
+
+                                    <EditText
+                                        android:id="@+id/yearRegistrationEdit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autofillHints="none"
+                                        android:imeOptions="actionDone"
+                                        android:importantForAutofill="no"
+                                        android:inputType="text"
+                                        tools:ignore="TextFields" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/birthdateTxtInputL"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="@string/dialog_bottom_input_birthdate"
+                                    android:inputType="text|textVisiblePassword|textNoSuggestions"
+                                    app:errorEnabled="true"
+                                    app:helperTextEnabled="true">
+
+                                    <EditText
+                                        android:id="@+id/birthdateEdit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autofillHints="none"
+                                        android:imeOptions="actionDone"
+                                        android:importantForAutofill="no"
+                                        android:inputType="date" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/continueBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:text="@string/dialog_bottom_button_continue"
+                                android:textAllCaps="false"
+                                android:layout_marginStart="@dimen/margin_start_and_end_standard"
+                                android:layout_marginEnd="@dimen/margin_start_and_end_standard"
+                                android:layout_marginBottom="@dimen/margin_top_bottom_dialog"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/line3" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+</LinearLayout>
